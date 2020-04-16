@@ -58,7 +58,8 @@ text-align: center;
 }
 .left-pane {
 border-right: solid #aaa;
-border-right-width: 0 0 0 100px;
+border-right-width: 0 0 0 1px;
+flex: 0 0 300px;
 }
 .my-tag {
 padding: 6px 10px;

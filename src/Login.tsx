@@ -30,11 +30,10 @@ export class Login extends Component {
     }
 
     setNeptunkod(e: string) {
-        if (this.state.register === false) {
-            if (e === "B45NIK") {
-                this.setState({ email: e, displayName: "Viki" });
+        if (this.state.register)
+            if (e === "B45NIK" || e == "b45nik") {
+                this.setState({ displayName: "Viki" });
             }
-        }
         this.setState({ email: e });
     }
 
