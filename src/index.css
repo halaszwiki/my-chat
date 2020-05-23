@@ -111,6 +111,13 @@ display: none;
 .left .left-pane {
 flex: 1;
 }
+.right-pane{
+  border-width: 0 0 0 0px;
+}
+}
+.right-pane {
+  border: solid #aaa;
+border-width: 0 0 0 1px;
 }
 .right-pane .conversation-header {
 padding: 6px 8px;
