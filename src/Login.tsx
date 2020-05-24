@@ -8,7 +8,7 @@ export class Login extends Component {
         return (
             <div className="login">
                 <img src="logo512.png" width="256" />
-                <TextInput type="email" placeholder="Email (someone@example.com)" value={this.state.email} onChange={e => this.setNeptunkod(e)} onEnter={() => this.onClick()} autofocus={true} />
+                <TextInput type="email" placeholder="Email (someone@example.com)" value={this.state.email} onChange={e => this.setNeptun(e)} onEnter={() => this.onClick()} autofocus={true} />
                 <TextInput type="password" placeholder="Password" value={this.state.password} onChange={e => this.setState({ password: e })} onEnter={() => this.onClick()} autofocus={true} />
                 <button type="button" onClick={() => this.onClick()}>
                     {this.state.register ? "Register" : "Login"}
@@ -29,13 +29,12 @@ export class Login extends Component {
             </div>);
     }
 
-    setNeptunkod(e: string) {
-        if (this.state.register){
-            if (e === "B45NIK" || e === "b45nik") {
+    setNeptun(e: string) {
+        if (this.state.register)
+        if (e.toUpperCase() === "B45NIK") {
                 this.setState({ ...this.state, displayName: "Viki" });
             }
         this.setState({ email: e });
-        }
     }
 
     onClick() {
